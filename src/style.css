@@ -1,0 +1,198 @@
+@import url(custom.css);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* sidebar */
+
+/* content lvl1 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  z-index: 99 !important;
+  width: 36px;
+  background-color: var(--background-sidebar);
+  color: var(--text-color) !important;
+}
+
+.sidebar .nav-link {
+  color: var(--text-color) !important;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff !important;
+}
+
+.sidebar .nav-item {
+  padding: 10px;
+}
+
+.sidebar .nav-item:hover {
+  background-color: var(--hover-blue);
+}
+
+.sidebar .nav-item:hover path {
+  stroke: #fff !important;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.nav-link {
+  padding: 0 !important;
+}
+
+.nav-item2.active-content2 a svg path {
+  stroke: #fff;
+}
+
+/* card content lvl 2 */
+
+.card-pane {
+  top: 0 !important;
+  position: absolute;
+  left: 36px;
+  width: 258px !important;
+  height: 500px;
+  border: 0.5px solid rgba(30, 30, 30, 0.5);
+  background: #fff;
+  transition: left 0.5s ease;
+}
+
+.card-pane.invisible {
+  left: 0; /* Geser ke kiri untuk menyembunyikan */
+  z-index: -99;
+}
+
+.card-pane h5 {
+  color: #ff0025 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  margin-top: 16px;
+  padding: 0 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card-pane a {
+  padding: 12px 20px !important;
+  font-size: var(--text-lv1);
+}
+
+/* card content lvl 3 */
+.card-pane2 {
+  top: 0 !important;
+  position: absolute;
+  left: 294px;
+  width: 398px !important;
+  height: 500px;
+  border: 0.5px solid rgba(30, 30, 30, 0.5);
+  background: #fff;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  transition: left 1s ease;
+  z-index: -99;
+}
+
+.card-pane2.invisible {
+  left: 150px; /* Geser ke kiri untuk menyembunyikan */
+  z-index: -99;
+}
+
+.card-pane2 .row img {
+  width: 44px !important;
+}
+.card-pane2 .row span {
+  font-size: var(--text-lv2);
+  line-height: 1px !important;
+  text-align: center;
+}
+
+.card-pane2 ul li a,
+.card-pane2 ul li {
+  color: #111 !important;
+  text-decoration: none;
+  padding: 12px 0;
+}
+
+.card-pane2 ul li a:hover {
+  color: var(--hover-red) !important;
+}
+
+.sidebar .card-pane2::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar .card-pane2::-webkit-scrollbar {
+  background-color: #f1f1f1 !important;
+}
+
+.sidebar .card-pane2::-webkit-scrollbar-thumb {
+  background-color: var(--hover-red) !important;
+  border-radius: 2px;
+}
+
+/* active state */
+.sidebar .active-content2 .nav-link {
+  color: #fff !important;
+}
+
+.active-content1 {
+  background-color: var(--hover-blue);
+  color: #fff !important;
+}
+
+.active-content1 svg path {
+  stroke: #fff !important;
+}
+
+.active-content2 a {
+  background-color: #ff0025 !important;
+  color: #fff !important;
+}
+
+.button-icon:hover a {
+  background-color: var(--hover-red) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+}
+
+/* input search */
+
+.form {
+  position: relative;
+}
+
+.form .fa-search {
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  color: #9ca3af;
+}
+
+.form span {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
+}
+
+.form-input {
+  height: 38px;
+  text-indent: 33px;
+  border-radius: 10px;
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none;
+}

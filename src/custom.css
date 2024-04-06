@@ -1,0 +1,12 @@
+:root {
+  /* color */
+  --hover-red: #ff0025;
+  --hover-blue: #2d539b;
+  --text-color: #1e1e1e;
+  --background-sidebar: #fff5f6;
+
+  /* font size */
+  --text-lv1: 16px;
+  --text-lv2: 12px;
+  --text-lv3: 8px;
+}
