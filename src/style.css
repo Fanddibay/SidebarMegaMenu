@@ -61,7 +61,7 @@
   position: absolute;
   left: 36px;
   width: 258px !important;
-  height: 500px;
+
   border: 0.5px solid rgba(30, 30, 30, 0.5);
   background: #fff;
   transition: left 0.5s ease;
@@ -154,7 +154,7 @@
   stroke: #fff !important;
 }
 
-.active-content2 a {
+.active-content2 {
   background-color: #ff0025 !important;
   color: #fff !important;
 }
@@ -195,4 +195,161 @@
 .form-input:focus {
   box-shadow: none;
   border: none;
+}
+
+/* card */
+.card-search-recent {
+  background-color: #0068af !important;
+  padding: 5px 10px;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 38px !important;
+}
+
+.card-search-recent span,
+.card-search-recent i {
+  color: #fff;
+}
+
+.card-search-list {
+  background-color: #e8121a !important;
+  padding: 5px 10px;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 38px !important;
+}
+
+.card-search-list span,
+.card-search-list i {
+  color: #fff;
+}
+
+.card-file {
+  height: 80px;
+  width: 100% !important;
+  border-radius: 10px;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.card-file:hover {
+  color: #ff0025;
+  border: 1px solid #ff0025;
+}
+
+.searchAdvance i:hover {
+  color: #ff0025 !important;
+}
+
+.card-file img {
+  width: 60px;
+  height: 60px;
+}
+
+.card-file p {
+  color: #1e1e1e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-file a {
+  color: #e8121a;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.grid-style .grid-title {
+  color: #a3a3a3;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.grid-style a span {
+  color: #1e1e1e;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.grid-style a:hover span {
+  color: #ff0025 !important;
+  font: bold;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent !important;
+}
+
+.pagination .page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #e5131d !important;
+  border-color: #e5131d !important;
+}
+
+.pagination .page-link {
+  color: #e5131d;
+}
+
+.modal-body {
+  padding-bottom: 44px !important;
+  width: 100% !important;
+  overflow: auto;
+  height: 650px;
+}
+
+.modal-content {
+  width: 80vw !important;
+  left: -500px !important;
+  top: 3vw !important;
+}
+
+.pagination .page-link {
+  color: #e5131d;
+  height: 50px !important;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+button.btn-close {
+  color: #e5131d !important;
+  border: 1px solid #121212 !important;
+  padding: 8px !important;
+}
+
+#gridLayout a:hover {
+  color: #e5131d !important;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar {
+  background-color: #f1f1f1 !important;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--hover-red) !important;
+  border-radius: 2px;
 }

@@ -152,3 +152,22 @@ toggles.forEach((index, idx) => {
     }
   });
 });
+
+function listGrid() {
+  const gridButton = document.getElementById("gridButton");
+  const rowButton = document.getElementById("rowButton");
+  const gridLayout = document.getElementById("gridLayout");
+  const rowLayout = document.getElementById("rowLayout");
+
+  if (gridLayout.classList.contains("d-none")) {
+    gridLayout.classList.remove("d-none");
+    rowButton.classList.add("d-none");
+    gridButton.classList.remove("d-none");
+    rowLayout.classList.add("d-none");
+  } else {
+    gridLayout.classList.add("d-none");
+    rowButton.classList.remove("d-none");
+    gridButton.classList.add("d-none");
+    rowLayout.classList.remove("d-none");
+  }
+}
