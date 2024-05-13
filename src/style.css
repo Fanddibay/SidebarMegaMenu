@@ -93,7 +93,7 @@
   position: absolute;
   left: 294px;
   width: 398px !important;
-  height: 500px;
+  height: 575px;
   border: 0.5px solid rgba(30, 30, 30, 0.5);
   background: #fff;
   overflow-y: auto !important;
@@ -203,6 +203,7 @@
   padding: 5px 10px;
   justify-content: space-between;
   border-radius: 5px;
+
   height: 38px !important;
 }
 
@@ -216,6 +217,7 @@
   padding: 5px 10px;
   justify-content: space-between;
   border-radius: 5px;
+
   height: 38px !important;
 }
 
@@ -289,16 +291,6 @@
   font: bold;
 }
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0 !important;
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent !important;
-}
-
 .pagination .page-item.active .page-link {
   z-index: 3;
   color: #fff;
@@ -310,17 +302,15 @@
   color: #e5131d;
 }
 
+.modal-dialog {
+  max-width: 85% !important;
+}
+
 .modal-body {
   padding-bottom: 44px !important;
   width: 100% !important;
   overflow: auto;
   height: 650px;
-}
-
-.modal-content {
-  width: 80vw !important;
-  left: -500px !important;
-  top: 3vw !important;
 }
 
 .pagination .page-link {

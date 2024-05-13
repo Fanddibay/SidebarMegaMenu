@@ -171,3 +171,16 @@ function listGrid() {
     rowLayout.classList.remove("d-none");
   }
 }
+
+function descending() {
+  const alphaZ = document.getElementById("alphaZ");
+  const alphaA = document.getElementById("alphaA");
+
+  if (alphaA.classList.contains("d-none")) {
+    alphaA.classList.remove("d-none");
+    alphaZ.classList.add("d-none");
+  } else {
+    alphaA.classList.add("d-none");
+    alphaZ.classList.remove("d-none");
+  }
+}
