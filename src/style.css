@@ -61,7 +61,7 @@
   position: absolute;
   left: 36px;
   width: 258px !important;
-
+  height: 570px;
   border: 0.5px solid rgba(30, 30, 30, 0.5);
   background: #fff;
   transition: left 0.5s ease;
@@ -93,7 +93,7 @@
   position: absolute;
   left: 294px;
   width: 398px !important;
-  height: 575px;
+  height: 570px;
   border: 0.5px solid rgba(30, 30, 30, 0.5);
   background: #fff;
   overflow-y: auto !important;
@@ -310,7 +310,7 @@
   padding-bottom: 44px !important;
   width: 100% !important;
   overflow: auto;
-  height: 650px;
+  height: 750px;
 }
 
 .pagination .page-link {
