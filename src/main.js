@@ -184,3 +184,87 @@ function descending() {
     alphaZ.classList.remove("d-none");
   }
 }
+
+// pagination
+const totalContent = 120;
+const perPage = 20;
+let currentPage = 1;
+
+function generateContent(page) {
+  let contentList = "";
+  for (
+    let i = (page - 1) * perPage + 1;
+    i <= Math.min(page * perPage, totalContent);
+    i++
+  ) {
+    contentList += `
+      <div class="col">
+        <a class="card-file align-items-center ps-3 d-flex gap-4" href="#">
+          <img src="assets/img-content/rev-Branch.png" alt="" />
+          <span>Revenue by Service ${i}</span>
+        </a>
+      </div>
+    `;
+  }
+  $("#contentList").html(contentList);
+  generateEntriesText(); // Tambahkan ini untuk memperbarui teks entri
+}
+
+function updatePaginationButtons() {
+  $(".page-item").removeClass("active");
+  $(`#page${currentPage}`).addClass("active");
+  $("#prevBtn").prop("disabled", currentPage === 1);
+  $("#nextBtn").prop(
+    "disabled",
+    currentPage === Math.ceil(totalContent / perPage)
+  );
+}
+
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    generateContent(currentPage);
+    updatePaginationButtons();
+  }
+}
+
+function nextPage() {
+  if (currentPage < Math.ceil(totalContent / perPage)) {
+    currentPage++;
+    generateContent(currentPage);
+    updatePaginationButtons();
+  }
+}
+
+function generateEntriesText() {
+  let startIndex = (currentPage - 1) * perPage + 1;
+  let endIndex = Math.min(currentPage * perPage, totalContent);
+  let totalEntries = totalContent;
+  let entriesText = `Showing ${startIndex} to ${endIndex} of ${totalEntries} entries`;
+  $(".entries-text").text(entriesText);
+}
+
+function generatePaginationLinks() {
+  let pagination = "";
+  for (let i = 1; i <= Math.ceil(totalContent / perPage); i++) {
+    pagination += `
+      <li id="page${i}" class="page-item ${i === currentPage ? "active" : ""}">
+        <a class="page-link" href="#" onclick="goToPage(${i})">${i}</a>
+      </li>
+    `;
+  }
+  $("#pagination").html(pagination);
+}
+
+function goToPage(page) {
+  currentPage = page;
+  generateContent(currentPage);
+  updatePaginationButtons();
+}
+
+$(document).ready(function () {
+  generateContent(currentPage);
+  generatePaginationLinks();
+  updatePaginationButtons();
+  generateEntriesText(); // Tambahkan ini untuk memperbarui teks entri saat halaman pertama dimuat
+});

@@ -1429,384 +1429,206 @@
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close text-danger"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="container searchAdvance">
-              <section>
-                <div class="navbar-search">
-                  <div class="mt-1">
+          <div class="modal-header px-4">
+            <section>
+              <div class="navbar-search">
+                <div class="mt-1">
+                  <div class="d-flex justify-content-between">
                     <span class="fw-bold fs-4">Report Portfolio</span>
-                    <div class="d-flex justify-content-between mt-3">
-                      <div class="w-25">
-                        <div class="form mb-2">
-                          <i class="fa fa-search"></i>
-                          <input
-                            type="text"
-                            class="form-control form-input"
-                            placeholder="Search"
-                          />
-                        </div>
+                    <button
+                      type="button"
+                      class="btn-close text-danger"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="d-flex justify-content-between mt-3">
+                    <div class="w-25">
+                      <div class="form mb-2">
+                        <i class="fa fa-search"></i>
+                        <input
+                          type="text"
+                          class="form-control form-input"
+                          placeholder="Search"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                      <!-- Example single danger button -->
+                      <!-- category -->
+                      <div class="btn-group me-3">
+                        <span
+                          type="button"
+                          class="dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Category
+                        </span>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="true"
+                                checked
+                                aria-label="Checkbox for following text input"
+                              />
+                              Revenue</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Prepaid Daily Usage</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Operational Driver</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="true"
+                                checked
+                                aria-label="Checkbox for following text input"
+                              />
+                              Profit & Loss</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Subsidiary</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Investor Relations</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Financial Position</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item d-flex gap-3" href="#">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                aria-label="Checkbox for following text input"
+                              />
+                              Other</a
+                            >
+                          </li>
+                          <li>
+                            <hr />
+                            <a
+                              class="dropdown-item text-center text-danger"
+                              href="#"
+                            >
+                              Remove All</a
+                            >
+                          </li>
+                        </ul>
                       </div>
                       <div class="d-flex gap-3">
-                        <!-- Example single danger button -->
-                        <!-- category -->
-                        <div class="btn-group me-3">
-                          <span
-                            type="button"
-                            class="dropdown-toggle"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            Category
+                        <a
+                          href="#"
+                          class="text-dark text-decoration-none"
+                          onclick="descending()"
+                        >
+                          <span id="alphaA"
+                            ><i class="fa-solid fa-arrow-down-a-z"></i
+                          ></span>
+                          <span id="alphaZ" class="d-none">
+                            <i class="fa-solid fa-arrow-up-z-a"></i>
                           </span>
-                          <ul class="dropdown-menu">
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value="true"
-                                  checked
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Revenue</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Prepaid Daily Usage</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Operational Driver</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value="true"
-                                  checked
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Profit & Loss</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Subsidiary</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Investor Relations</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Financial Position</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item d-flex gap-3" href="#">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  aria-label="Checkbox for following text input"
-                                />
-                                Other</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                class="dropdown-item d-flex gap-3 text-danger"
-                                href="#"
-                              >
-                                Remove All</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="d-flex gap-3">
+                        </a>
+
+                        <div>
                           <a
                             href="#"
                             class="text-dark text-decoration-none"
-                            onclick="descending()"
+                            onclick="listGrid()"
                           >
-                            <span id="alphaA"
-                              ><i class="fa-solid fa-arrow-down-a-z"></i
+                            <span id="rowButton" class="d-none me-2">
+                              <i class="fa-solid fa-grip-vertical"></i
                             ></span>
-                            <span id="alphaZ" class="d-none">
-                              <i class="fa-solid fa-arrow-up-z-a"></i>
-                            </span>
+                            <span id="gridButton">
+                              <i class="fa-solid fa-list"></i
+                            ></span>
                           </a>
-
-                          <div>
-                            <a
-                              href="#"
-                              class="text-dark text-decoration-none"
-                              onclick="listGrid()"
-                            >
-                              <span id="rowButton" class="d-none me-2">
-                                <i class="fa-solid fa-grip-vertical"></i
-                              ></span>
-                              <span id="gridButton">
-                                <i class="fa-solid fa-list"></i
-                              ></span>
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex gap-4 mt-2">
-                      <div
-                        class="card-search-recent d-flex gap-5 align-items-center"
-                      >
-                        <span>Last Recent File</span>
-                        <i class="fa-solid fa-circle-xmark"></i>
-                      </div>
-                      <div
-                        class="card-search-list d-flex gap-5 align-items-center"
-                      >
-                        <span>Revenue File</span>
-                        <i class="fa-solid fa-circle-xmark"></i>
-                      </div>
-                      <div
-                        class="card-search-list d-flex gap-5 align-items-center"
-                      >
-                        <span>Profit and Loss</span>
-                        <i class="fa-solid fa-circle-xmark"></i>
-                      </div>
+                  </div>
+                  <div class="d-flex gap-4 mt-2">
+                    <div
+                      class="card-search-recent d-flex gap-5 align-items-center"
+                    >
+                      <span>Last Recent File</span>
+                      <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <div
+                      class="card-search-list d-flex gap-5 align-items-center"
+                    >
+                      <span>Revenue File</span>
+                      <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <div
+                      class="card-search-list d-flex gap-5 align-items-center"
+                    >
+                      <span>Profit and Loss</span>
+                      <i class="fa-solid fa-circle-xmark"></i>
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
+            </section>
+          </div>
+          <div class="modal-body">
+            <div class="container searchAdvance">
               <!-- main page -->
               <!-- row section -->
               <section>
-                <div class="mt-4" id="rowLayout">
-                  <div class="row row-cols-4 g-4">
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a
-                        class="card-file align-items-center ps-3 d-flex gap-4"
-                        href="#"
-                      >
-                        <img src="assets/img-content/rev-Branch.png" alt="" />
-                        <span> Revenue by Service</span>
-                      </a>
-                    </div>
-                  </div>
+                <div class="mt-3" id="rowLayout">
+                  <div id="contentList" class="row row-cols-4 g-4"></div>
                 </div>
               </section>
 
@@ -2075,32 +1897,43 @@
               </section>
             </div>
           </div>
-          <div class="border-top py-2">
+          <div class="border-top py-2 px-4">
             <div
               class="d-flex justify-content-between w-100 align-items-center container py-2"
             >
-              <div class="">Showing 1 to 10 of 57 entries</div>
+              <div class="entries-text"></div>
+
               <!-- pagination -->
-              <div>
-                <nav aria-label="...">
-                  <ul class="pagination justify-content-end">
-                    <li class="page-item disabled">
-                      <span class="page-link">Previous</span>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                      <span class="page-link">2</span>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                    </li>
-                  </ul>
-                </nav>
+              <div class="d-flex">
+                <div class="text-center mt-4 d-flex">
+                  <button
+                    id="prevBtn"
+                    class="btn btn-danger btn-custom-left"
+                    onclick="prevPage()"
+                    disabled
+                    style="height: 50px"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <nav aria-label="Page navigation">
+                    <ul
+                      id="pagination"
+                      class="pagination paginationn-custom justify-content-center"
+                    >
+                      <!-- Pagination links will be inserted here -->
+                    </ul>
+                  </nav>
+                  <button
+                    id="nextBtn"
+                    class="btn btn-danger btn-custom-right"
+                    onclick="nextPage()"
+                    disabled
+                    style="height: 50px"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -2108,6 +1941,11 @@
       </div>
     </div>
     <!-- end modal content -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
     <script src="main.js"></script>
     <script

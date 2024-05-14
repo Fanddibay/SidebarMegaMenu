@@ -302,6 +302,14 @@
   color: #e5131d;
 }
 
+.modal-content {
+  height: 92vh !important;
+}
+
+.modal-header {
+  display: block !important;
+}
+
 .modal-dialog {
   max-width: 85% !important;
 }
@@ -342,4 +350,28 @@ button.btn-close {
 .modal-body::-webkit-scrollbar-thumb {
   background-color: var(--hover-red) !important;
   border-radius: 2px;
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.btn-custom-right {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.btn-custom-left {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
 }
